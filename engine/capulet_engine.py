@@ -1,11 +1,8 @@
-from abc import ABC
-
-from car import Car
+from engine.engine import Engine
 
 # Service every 30,000 miles
-class CapuletEngine(Car, ABC):
-    def __init__(self, last_service_mileage, current_mileage):
-        super().__init__()
+class CapuletEngine(Engine):
+    def __init__(self, current_mileage, last_service_mileage):
         self.current_mileage = current_mileage
         self.last_service_mileage = last_service_mileage
 
